@@ -1,2 +1,0 @@
-# Numetric
-Numetric web
