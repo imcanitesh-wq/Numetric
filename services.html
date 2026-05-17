@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Numetric Business & Advisory</title>
+<meta name="description" content="Numetric services — Bookkeeping, Tax Planning, BAS, Capital Gains, Crypto, Company Returns, Trust Returns and Audit & Assurance. Registered Tax Agent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.svc-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:60px 0;border-top:1px solid var(--border)}
+.svc-detail-grid:first-child{border-top:none;padding-top:0}
+.svc-detail-grid.flip{direction:rtl}
+.svc-detail-grid.flip>*{direction:ltr}
+.svc-visual-lg{background:var(--bg3);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .3s}
+.svc-visual-lg:hover{border-color:var(--border-o)}
+.dpanel{display:none;animation:fadeIn .3s ease}
+.dpanel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.price-card{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:28px;text-align:center;transition:border-color .25s,transform .25s}
+.price-card:hover{border-color:var(--border-o);transform:translateY(-4px)}
+.price-card.featured{border-color:var(--orange);background:rgba(249,115,22,.06)}
+.price-tier{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.price-val{font-size:40px;font-weight:900;color:var(--white);letter-spacing:-.04em;line-height:1;margin-bottom:4px}
+.price-per{font-size:13px;color:var(--muted);margin-bottom:20px}
+.price-items{list-style:none;text-align:left;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.price-items li{font-size:13px;color:var(--muted);padding-left:18px;position:relative}
+.price-items li::before{content:'✓';position:absolute;left:0;color:var(--orange);font-weight:800;font-size:11px}
+@media(max-width:1024px){.svc-detail-grid{grid-template-columns:1fr;gap:36px;padding:48px 0}.svc-detail-grid.flip{direction:ltr}.price-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<canvas id="dna"></canvas>
+
+<nav>
+  <div class="nav-w">
+    <a href="index.html" class="n-logo"><div class="n-mark">N</div><div><span class="n-name">Numetric Business & Advisory®</span><span class="n-sub">Registered Tax Agent · Melbourne VIC</span></div></a>
+    <ul class="n-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-n">Book Appointment</a>
+    <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob" id="mob"><button class="mob-x" id="mob-x">✕</button><a href="index.html" onclick="closeMob()">Home</a><a href="about.html" onclick="closeMob()">About</a><a href="services.html" onclick="closeMob()">Services</a><a href="blog.html" onclick="closeMob()">Blog</a><a href="contact.html" onclick="closeMob()">Contact</a></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb sr"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+    <span class="ey sr d1">Our Services</span>
+    <h1 class="h1 sr d2" style="margin-bottom:20px">Real Accounting Services <span class="o">for You</span></h1>
+    <p class="lead sr d3" style="max-width:560px;margin:0 auto">We conduct all accounting services with professionalism and adhere to ethical standards of the accounting profession. We love to stay up-to-date with industry trends and regulations.</p>
+  </div>
+</div>
+
+<!-- SERVICE DETAIL ROWS -->
+<section>
+  <div class="wrap">
+    <div class="sdiv sr"><span class="sdiv-num">001</span><div class="sdiv-dot"></div><span class="sdiv-t">Bookkeeping &amp; Payroll Services</span><span class="sdiv-s">Complete financial records management for small and medium businesses.</span></div>
+
+    <div class="svc-detail-grid">
+      <div class="svc-visual-lg sr-l">
+        <div style="padding:28px">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border)">
+            <div class="svc-icon">📚</div>
+            <div><div style="font-size:15px;font-weight:700;color:var(--white)">Bookkeeping &amp; Payroll</div><div style="font-size:12px;color:var(--muted)">Complete financial records management</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="si"><div class="si-chk">✓</div>Daily transaction recording<span class="si-tag">Daily</span></div>
+            <div class="si"><div class="si-chk">✓</div>Payroll processing &amp; STP<span class="si-tag">Weekly</span></div>
+            <div class="si"><div class="si-chk">✓</div>SGC lodgement<span class="si-tag">Quarterly</span></div>
+            <div class="si"><div class="si-chk">✓</div>Bank reconciliation<span class="si-tag">Monthly</span></div>
+            <div class="si"><div class="si-chk">✓</div>Financial reporting<span class="si-tag">Periodic</span></div>
+          </div>
+        </div>
+        <div style="margin:0 20px 20px;background:rgba(249,115,22,.06);border:1px solid var(--border-o);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px">
+          <div style="width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 3px rgba(249,115,22,.2);flex-shrink:0"></div>
+          <div style="font-size:12px;font-weight:600;color:var(--white)">Records up to date<span style="font-size:11px;color:var(--muted);display:block">Synced &amp; reconciled</span></div>
+        </div>
+      </div>
+      <div class="sr-r">
+        <span class="ey">Bookkeeping &amp; Payroll</span>
+        <h2 class="h3" style="margin-bottom:16px">Keep your books <span class="o">clean &amp; current</span></h2>
+        <p class="body-t" style="margin-bottom:18px">We provide bookkeeping services for small and medium businesses. We also provide payroll services and SGC lodgement. Please contact our office and get in touch with our qualified and experienced accountant and we can assist you more.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px">
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">📊 Transactions</span>
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">💰 Payroll</span>
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">🏦 Reconciliation</span>
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">📋 SGC Lodgement</span>
+        </div>
+        <a href="contact.html" class="btn-o">Get Started →</a>
+      </div>
+    </div>
+
+    <div class="sdiv sr" style="margin-top:60px"><span class="sdiv-num">002</span><div class="sdiv-dot"></div><span class="sdiv-t">Tax Planning &amp; Income Tax Returns</span><span class="sdiv-s">Maximise your refund and minimise tax — Registered Tax Agent.</span></div>
+
+    <div class="svc-detail-grid flip">
+      <div class="svc-visual-lg sr-r">
+        <div style="padding:28px">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border)">
+            <div class="svc-icon">🧾</div>
+            <div><div style="font-size:15px;font-weight:700;color:var(--white)">Tax Planning</div><div style="font-size:12px;color:var(--muted)">Income Tax Returns &amp; planning</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="si"><div class="si-chk">✓</div>Income tax return lodgement<span class="si-tag">Annual</span></div>
+            <div class="si"><div class="si-chk">✓</div>Tax minimisation strategies<span class="si-tag">Planning</span></div>
+            <div class="si"><div class="si-chk">✓</div>ATO correspondence<span class="si-tag">Ongoing</span></div>
+            <div class="si"><div class="si-chk">✓</div>Registered Tax Agent advice<span class="si-tag">Expert</span></div>
+            <div class="si"><div class="si-chk">✓</div>Individual &amp; business returns<span class="si-tag">All types</span></div>
+          </div>
+        </div>
+        <div style="margin:0 20px 20px;background:rgba(249,115,22,.06);border:1px solid var(--border-o);border-radius:10px;padding:14px;display:flex;align-items:center;gap:10px">
+          <div style="width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 3px rgba(249,115,22,.2);flex-shrink:0"></div>
+          <div style="font-size:12px;font-weight:600;color:var(--white)">Registered Tax Agent<span style="font-size:11px;color:var(--muted);display:block">ATO authorised</span></div>
+        </div>
+      </div>
+      <div class="sr-l">
+        <span class="ey">Tax Planning</span>
+        <h2 class="h3" style="margin-bottom:16px">Plan ahead, <span class="o">pay less tax</span></h2>
+        <p class="body-t" style="margin-bottom:14px">An income tax return provides detailed information about the taxpayer's income from various sources, such as wages, salaries, tips, interest, dividends, and capital gains.</p>
+        <p class="body-t" style="margin-bottom:14px">Have you lodged your Income Tax Return? We are a Registered Tax Agent and can help you prepare and lodge your Tax Return. Please contact our office and book an appointment and we can assist you.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px">
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">🧾 Tax Returns</span>
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">📉 Minimisation</span>
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">📬 ATO</span>
+          <span style="font-size:11px;font-weight:600;color:var(--muted);background:var(--bg4);border:1px solid var(--border);padding:5px 12px;border-radius:999px">🔑 Registered</span>
+        </div>
+        <a href="contact.html" class="btn-o">Book Now →</a>
+      </div>
+    </div>
+
+    <div class="sdiv sr" style="margin-top:60px"><span class="sdiv-num">003</span><div class="sdiv-dot"></div><span class="sdiv-t">Audit &amp; Assurance</span><span class="sdiv-s">Review and evaluate your organisation's financial information and internal controls.</span></div>
+
+    <div class="svc-detail-grid">
+      <div class="svc-visual-lg sr-l">
+        <div style="padding:28px">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border)">
+            <div class="svc-icon">🔍</div>
+            <div><div style="font-size:15px;font-weight:700;color:var(--white)">Audit &amp; Assurance</div><div style="font-size:12px;color:var(--muted)">Financial review &amp; evaluation</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="si"><div class="si-chk">✓</div>Financial statement review<span class="si-tag">Compliance</span></div>
+            <div class="si"><div class="si-chk">✓</div>Internal controls evaluation<span class="si-tag">Assurance</span></div>
+            <div class="si"><div class="si-chk">✓</div>Risk assessment<span class="si-tag">Advisory</span></div>
+            <div class="si"><div class="si-chk">✓</div>Audit reports<span class="si-tag">Reporting</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sr-r">
+        <span class="ey">Audit &amp; Assurance</span>
+        <h2 class="h3" style="margin-bottom:16px">Financial review you can <span class="o">trust</span></h2>
+        <p class="body-t" style="margin-bottom:18px">Audit and assurance refer to the processes used to review and evaluate an organization's financial information and internal controls. We provide thorough audit services to ensure your finances are accurate and compliant.</p>
+        <a href="contact.html" class="btn-o">Get in Touch →</a>
+      </div>
+    </div>
+
+    <div class="sdiv sr" style="margin-top:60px"><span class="sdiv-num">004</span><div class="sdiv-dot"></div><span class="sdiv-t">Capital Gains Tax &amp; Cryptocurrency</span><span class="sdiv-s">Expert advice on CGT, property, shares and crypto tax.</span></div>
+
+    <div class="svc-detail-grid flip">
+      <div class="svc-visual-lg sr-r">
+        <div style="padding:28px">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border)">
+            <div class="svc-icon">💹</div>
+            <div><div style="font-size:15px;font-weight:700;color:var(--white)">Capital Gains &amp; Crypto</div><div style="font-size:12px;color:var(--muted)">CGT &amp; cryptocurrency tax</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="si"><div class="si-chk">✓</div>CGT on property &amp; shares<span class="si-tag">Annual</span></div>
+            <div class="si"><div class="si-chk">✓</div>Cryptocurrency tax<span class="si-tag">New</span></div>
+            <div class="si"><div class="si-chk">✓</div>DeFi &amp; NFT reporting<span class="si-tag">Expert</span></div>
+            <div class="si"><div class="si-chk">✓</div>ATO compliant calculations<span class="si-tag">Compliant</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sr-l">
+        <span class="ey">Capital Gains &amp; Crypto</span>
+        <h2 class="h3" style="margin-bottom:16px">CGT, crypto &amp; <span class="o">capital gains sorted</span></h2>
+        <p class="body-t" style="margin-bottom:14px">Capital gain tax is a tax that is levied on the profit earned from the sale of a capital asset, such as stocks, real estate, or other types of investments.</p>
+        <p class="body-t" style="margin-bottom:18px">The ATO treats cryptocurrency as property. Capital gains tax applies when you dispose of crypto. We specialise in crypto tax calculations including DeFi, NFTs, staking rewards and all exchange transactions.</p>
+        <a href="contact.html" class="btn-o">Get Help →</a>
+      </div>
+    </div>
+
+    <div class="sdiv sr" style="margin-top:60px"><span class="sdiv-num">005</span><div class="sdiv-dot"></div><span class="sdiv-t">Business Activity Statement (BAS)</span><span class="sdiv-s">GST, PAYG, Fuel Tax Credits and more — quarterly or monthly.</span></div>
+
+    <div class="svc-detail-grid">
+      <div class="svc-visual-lg sr-l">
+        <div style="padding:28px">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border)">
+            <div class="svc-icon">📑</div>
+            <div><div style="font-size:15px;font-weight:700;color:var(--white)">Business Activity Statement</div><div style="font-size:12px;color:var(--muted)">GST &amp; BAS lodgement</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="si"><div class="si-chk">✓</div>GST reporting &amp; registration<span class="si-tag">Monthly</span></div>
+            <div class="si"><div class="si-chk">✓</div>BAS lodgement<span class="si-tag">Quarterly</span></div>
+            <div class="si"><div class="si-chk">✓</div>PAYG Withholding<span class="si-tag">Ongoing</span></div>
+            <div class="si"><div class="si-chk">✓</div>Fuel Tax Credits<span class="si-tag">Ongoing</span></div>
+            <div class="si"><div class="si-chk">✓</div>PAYG Instalments<span class="si-tag">Quarterly</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sr-r">
+        <span class="ey">Business Activity Statement</span>
+        <h2 class="h3" style="margin-bottom:16px">BAS &amp; GST <span class="o">handled for you</span></h2>
+        <p class="body-t" style="margin-bottom:14px">If you are running a business and registered for GST, you need to lodge a Business Activity Statement (BAS). Your Business Activity Statement will help you report Goods and Services Tax (GST), Pay as You Go Instalment (PAYGI), PAYG Withholding, Fuel Tax Credit, &amp; Other Taxes.</p>
+        <p class="body-t" style="margin-bottom:18px">If your business income is more than $75,000 a year you need to report your GST every quarter or monthly. We make this simple and stress-free.</p>
+        <a href="contact.html" class="btn-o">Get Help →</a>
+      </div>
+    </div>
+
+    <div class="sdiv sr" style="margin-top:60px"><span class="sdiv-num">006</span><div class="sdiv-dot"></div><span class="sdiv-t">Trust Return &amp; Company Tax Return</span><span class="sdiv-s">Full entity compliance and financial reporting.</span></div>
+
+    <div class="svc-detail-grid flip">
+      <div class="svc-visual-lg sr-r">
+        <div style="padding:28px">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--border)">
+            <div class="svc-icon">🏛️</div>
+            <div><div style="font-size:15px;font-weight:700;color:var(--white)">Company &amp; Trust Returns</div><div style="font-size:12px;color:var(--muted)">Full entity compliance</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="si"><div class="si-chk">✓</div>Company tax returns<span class="si-tag">Annual</span></div>
+            <div class="si"><div class="si-chk">✓</div>Financial statements<span class="si-tag">Reporting</span></div>
+            <div class="si"><div class="si-chk">✓</div>Trust tax returns<span class="si-tag">Annual</span></div>
+            <div class="si"><div class="si-chk">✓</div>ASIC compliance<span class="si-tag">Compliance</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sr-l">
+        <span class="ey">Company &amp; Trust</span>
+        <h2 class="h3" style="margin-bottom:16px">Complete entity <span class="o">compliance &amp; reporting</span></h2>
+        <p class="body-t" style="margin-bottom:14px">A Trust Return, also known as a Trust Tax Return, is a document that is filed with the tax authority to report the income and deductions of a trust.</p>
+        <p class="body-t" style="margin-bottom:18px">A Company Tax Return is a document that is filed with the tax authority by a company to report its income, deductions, and tax liability for a particular tax year. We handle all entity types with full financial reporting.</p>
+        <a href="contact.html" class="btn-o">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sdiv sr"><span class="sdiv-num">007</span><div class="sdiv-dot"></div><span class="sdiv-t">Our Easy Process</span><span class="sdiv-s">Three simple steps to get your accounting &amp; tax sorted.</span></div>
+    <div style="text-align:center;margin-bottom:48px"><h2 class="h2 sr" style="margin-bottom:12px">Easy Process to <span class="o">Manage Your Finances</span></h2></div>
+    <div class="proc-grid">
+      <div class="pc sr d1"><div class="pc-num">1</div><div class="pc-title">Consultation</div><p class="pc-body">Get in touch to book your free initial consultation. We discuss your situation, understand your needs and determine the best approach for your accounting &amp; tax.</p></div>
+      <div class="pc sr d2"><div class="pc-num">2</div><div class="pc-title">Choose a Package</div><p class="pc-body">We present a clear, transparent quote with no hidden fees. Choose the service package that suits your business size and accounting needs.</p></div>
+      <div class="pc sr d3"><div class="pc-num">3</div><div class="pc-title">Get Your Service</div><p class="pc-body">Sit back while our expert team prepares, reviews and lodges all your documents accurately and on time. We keep you informed throughout.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="sdiv sr"><span class="sdiv-num">008</span><div class="sdiv-dot"></div><span class="sdiv-t">Frequently Asked Questions</span><span class="sdiv-s">Everything you need to know before working with Numetric.</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+      <div class="sr-l">
+        <h2 class="h2" style="margin-bottom:14px">Common <span class="o">Questions</span></h2>
+        <p class="body-t" style="margin-bottom:36px">Simple answers to help you move forward with your accounting &amp; tax needs.</p>
+        <div style="max-width:none">
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span>Do I need a tax agent to lodge my return?</span><div class="faq-ic">+</div></button><div class="faq-ans">While individuals can self-lodge, a Registered Tax Agent like Numetric ensures your return is accurate, maximises your deductions and handles ATO correspondence. We often save clients more than our fee.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span>When do I need to register for GST?</span><div class="faq-ic">+</div></button><div class="faq-ans">If your business income exceeds $75,000 per year (or $150,000 for non-profits), you must register for GST and lodge BAS statements. We can help you register and manage all ongoing BAS lodgements.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span>Do you handle cryptocurrency tax?</span><div class="faq-ic">+</div></button><div class="faq-ans">Yes. The ATO treats cryptocurrency as property — capital gains tax applies when you dispose of crypto. We specialise in crypto tax including DeFi, NFTs, staking rewards and exchange transactions.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span>How much does a consultation cost?</span><div class="faq-ic">+</div></button><div class="faq-ans">Your initial consultation is completely free. We'll discuss your needs, explain our services and provide a transparent quote. You only pay once you're happy to proceed.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span>Can you help with company or trust structures?</span><div class="faq-ic">+</div></button><div class="faq-ans">Absolutely. We prepare Company Tax Returns, financial statements, Trust Returns and advise on tax-effective structures. We work with sole traders, partnerships, companies and trusts of all sizes.</div></div>
+          <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span>Where is your office located?</span><div class="faq-ic">+</div></button><div class="faq-ans">We are located at Level 1, 272 Leakes Road, Truganina VIC 3029. We also offer remote consultations for clients across Australia. Call (03) 7009 6255 or email admin@numetrictax.com.au.</div></div>
+        </div>
+      </div>
+      <div class="sr-r">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+          <div style="padding:28px;border-bottom:1px solid var(--border);background:rgba(249,115,22,.04)"><div style="font-size:32px;margin-bottom:12px">💬</div><h3 style="font-size:18px;font-weight:800;color:var(--white);margin-bottom:8px">Still have questions?</h3><p style="font-size:14px;color:var(--muted);line-height:1.7">Our team is ready to answer any question and help you get started with the right service.</p></div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:10px">
+            <a href="tel:0370096255" class="btn-o" style="justify-content:center">📞 Call (03) 7009 6255</a>
+            <a href="mailto:admin@numetrictax.com.au" class="btn-g" style="justify-content:center">✉️ Email Us</a>
+            <a href="contact.html" class="btn-g" style="justify-content:center">📅 Book Appointment</a>
+          </div>
+          <div style="border-top:1px solid var(--border)"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8!2d144.7442!3d-37.8384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad689824f11b167%3A0x7e6339d9d669341b!2s272+Leakes+Rd!5e0!3m2!1sen!2sau!4v1" width="100%" height="180" style="border:0;display:block;filter:invert(1) hue-rotate(180deg)" loading="lazy" title="Office location"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-in">
+    <span class="cta-lbl sr">Having Trouble Managing Your Accounting &amp; Tax?</span>
+    <h2 class="h2 sr d1" style="margin-bottom:14px">Are you looking for accountants who <span class="o">care about results?</span></h2>
+    <p class="lead sr d2" style="margin-bottom:32px">We genuinely care about achieving results for our clients and that's what drives us to provide our best — every single time.</p>
+    <div class="cta-checks sr d3"><span class="cta-chk">Free Consultation</span><span class="cta-chk">Registered Tax Agent</span><span class="cta-chk">Fast Turnaround</span></div>
+    <div class="cta-btns sr d4"><a href="contact.html" class="btn-o">Contact Us Now →</a><a href="tel:0370096255" class="btn-g">📞 (03) 7009 6255</a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div><div class="ft-brand-row"><div class="ft-mark">N</div><div class="ft-name">Numetric Business &amp; Advisory®</div></div><p class="ft-tag">Numbers are our passion — let us put them to work for you. Registered Tax Agent serving Australia.</p><div class="ft-socs"><a href="https://facebook.com" target="_blank" class="ft-soc">f</a><a href="mailto:admin@numetrictax.com.au" class="ft-soc">@</a></div></div>
+      <div class="ft-col"><h5>Navigate</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="ft-col"><h5>Services</h5><ul><li><a href="services.html">Bookkeeping &amp; Payroll</a></li><li><a href="services.html">Income Tax Returns</a></li><li><a href="services.html">BAS Lodgement</a></li><li><a href="services.html">CGT &amp; Crypto</a></li><li><a href="services.html">Company &amp; Trust</a></li><li><a href="services.html">Audit &amp; Assurance</a></li></ul></div>
+      <div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:0370096255">(03) 7009 6255</a></li><li><a href="mailto:admin@numetrictax.com.au">admin@numetrictax.com.au</a></li><li><a href="#">Level 1, 272 Leakes Rd</a></li><li><a href="#">Truganina VIC 3029</a></li><li><a href="https://numetrictax.com.au/privacy-policy/" target="_blank">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="ft-bot"><span class="ft-copy">2021–2026 © Numetric Business &amp; Advisory — All Rights Reserved · Registered Tax Agent</span><a href="#" class="ft-top-btn">↑ TOP</a></div>
+  </div>
+</footer>
+<script src="shared.js"></script>
+</body>
+</html>
